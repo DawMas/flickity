@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projekt_1</title>
+    <link rel="stylesheet" href="sass/_Glyphter.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="vendor/Normalize.css">
+    <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .firstslide {
+            background-image: url("images/camp-nou.jpg")
+        }
+
+        .secondslide {
+            background-image: url("images/malediwy.jpg")
+        }
+
+        .thirdslide {
+            background-image: url("images/arizona.jpg")
+        }
+
+        .fourthslide {
+            background-image: url("images/nowa-zelandia.jpg")
+        }
+
+        .fifthslide {
+            background-image: url("images/wietnam.jpg")
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>
+        View:
+        <a href="#carousel-cell1">Cell 1</a>,
+        <a href="#carousel-cell2">Cell 2</a>,
+        <a href="#carousel-cell3">Cell 3</a>,
+        <a href="#carousel-cell4">Cell 4</a>,
+        <a href="#carousel-cell5">Cell 5</a>
+    </p>
+
+
+    <div class="common">
+        <div class="main-carousel">
+            <div class="carousel-cell firstslide" id="carousel-cell1">
+                <div class="container">sdfsdfsdf</div>
+            </div>
+            <div class="carousel-cell secondslide" id="carousel-cell2">
+                <div class="container">sdfsdfsdf</div>
+            </div>
+            <div class="carousel-cell thirdslide" id="carousel-cell3">
+                <div class="container">sdfsdfsdf</div>
+            </div>
+            <div class="carousel-cell fourthslide" id="carousel-cell4">
+                <div class="container">sdfsdfsdf</div>
+            </div>
+            <div class="carousel-cell fifthslide" id="carousel-cell5">
+                <div class="container">sdfsdfsdf</div>
+            </div>
+        </div>
+        <button class="restart"><a href="#carousel-cell1">Restart</a></button>
+        <div class="progress-bar"></div>
+    </div>
+
+
+    <script src="vendor/hash.js"></script>
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
