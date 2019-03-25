@@ -1,4 +1,10 @@
+body{
+    widows: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  
 
+}
 
 .carousel-cell {
     width: 100%; /* full width */
@@ -6,9 +12,10 @@
     min-height: 250px;
     margin-right: 10px;
     background-size: cover;
-    position: relative;
-  }
   
+    max-width: 1200px;;
+  }
+
   .container {
       max-width: 1200px;
       display: flex;
