@@ -19,7 +19,10 @@ var flkty = new Flickity('.main-carousel', {
   // options
 });
 
-
+/*var restartSlide = document.querySelector('.restart');
+restartSlide.addEventListener( 'click', function() {
+  flkty.reloadCells(car)
+});*/
 
 var progressBar = document.querySelector('.progress-bar')
 
