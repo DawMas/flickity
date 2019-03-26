@@ -49,30 +49,59 @@
 
     <div class="common">
         <div class="main-carousel">
-            <div class="carousel-cell firstslide" id="carousel-cell1">
-                <div class="container">Camp-Nou</div>
-            </div>
-            <div class="carousel-cell secondslide" id="carousel-cell2">
-                <div class="container">Malediwy</div>
-            </div>
-            <div class="carousel-cell thirdslide" id="carousel-cell3">
-                <div class="container">Arizona</div>
-            </div>
-            <div class="carousel-cell fourthslide" id="carousel-cell4">
-                <div class="container">Nowa Zelandia</div>
-            </div>
-            <div class="carousel-cell fifthslide" id="carousel-cell5">
-                <div class="container">Vietnam</div>
-            </div>
+            
         </div>
         <button class="restart"><a href="#carousel-cell1">Restart</a></button>
         <div class="progress-bar"></div>
     </div>
 
 
+    <script id="template-product-item" type="x-tmpl-mustache">
+              <div class="carousel-cell" {{{description}}} >
+                <div class="container"><header>{{title}}</header></div>
+                </div>
+        
+        </script>
+    
+
+    <script>
+        var productsData = [
+            {
+                image: 'image 1',
+                title: 'Camp-Nou',
+                description:'id="carousel-cell1" style="background-image: url("images/camp-nou.jpg")"',
+                
+            },
+            {
+                image: 'image 1',
+                title: 'Malediwy',
+                description:'id="carousel-cell2" style="background-image: url("images/malediwy.jpg")"',
+            },
+            {
+                image: 'image 1',
+                title: 'Arizona',
+                description:'id="carousel-cell3" style="background-image: url("images/arizona.jpg")"',
+            },
+            {
+                image: 'image 1',
+                title: 'Nowa Zelandia',
+                description:'id="carousel-cell4" style="background-image: url("images/nowa-zelandia.jpg")"',
+            },
+            {
+                image: 'image 1',
+                title: 'Vietnam',
+                description:'id="carousel-cell5" style="background-image: url("images/vietnam.jpg")"',
+            }
+        ];
+    </script>
+
+
+
     
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
+    <script src="vendor/flickity-imagesloaded.js"></script>
+    <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
  
 </body>

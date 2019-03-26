@@ -8,6 +8,13 @@
   margin: 0 10px;
   background-size: cover; }
 
+.carousel-cell-image {
+  width: 100%;
+  /* full width */
+  min-height: 350px;
+  margin: 0 10px;
+  background-size: cover; }
+
 .container {
   max-width: 1200px;
   text-align: center;

@@ -6,6 +6,26 @@ var flkty = new Flickity( elem, {
   hash: true,
   pageDots: false,
 });*/
+'use strict';
+(function(){
+var templateItem = document.getElementById('template-product-item').innerHTML;
+
+var results = document.getElementById('main-carousel');
+Mustache.parse(templateItem);
+
+var listItems = '';
+
+for(var i = 0; i < productsData.length; i++){
+  console.log(productsData);
+  listItems += Mustache.render(templateItem, productsData[i]);
+}
+
+
+results.insertAdjacentHTML('beforeend', listItems);
+
+
+
+})();
 
 // element argument can be a selector string
 //   for an individual element
@@ -16,6 +36,7 @@ var flkty = new Flickity('.main-carousel', {
   pageDots: false,
   fullscreen: true,
   reloadCells: true,
+  lazyLoad: true,
   // options
 });
 
@@ -26,8 +47,8 @@ restartSlide.addEventListener( 'click', function() {
 
 var progressBar = document.querySelector('.progress-bar')
 
-flkty.on( 'scroll', function( progress ) {
-  progress = Math.max( 0, Math.min( 1, progress ) );
+flkty.on('scroll', function (progress) {
+  progress = Math.max(0, Math.min(1, progress));
   progressBar.style.width = progress * 100 + '%';
 });
 
