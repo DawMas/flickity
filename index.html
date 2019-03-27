@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flickity</title>
-    <link rel="stylesheet" href="sass/_Glyphter.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="vendor/Normalize.css">
@@ -57,7 +56,7 @@
 
 
     <script id="template-product-item" type="x-tmpl-mustache">
-              <div class="carousel-cell" {{{description}}} >
+              <div class="carousel-cell" {{description}} >
                 <div class="container"><header>{{title}}</header></div>
                 </div>
         
@@ -73,22 +72,22 @@
                 
             },
             {
-                image: 'image 1',
+                image: 'image 2',
                 title: 'Malediwy',
                 description:'id="carousel-cell2" style="background-image: url("images/malediwy.jpg")"',
             },
             {
-                image: 'image 1',
+                image: 'image 3',
                 title: 'Arizona',
                 description:'id="carousel-cell3" style="background-image: url("images/arizona.jpg")"',
             },
             {
-                image: 'image 1',
+                image: 'image 4',
                 title: 'Nowa Zelandia',
                 description:'id="carousel-cell4" style="background-image: url("images/nowa-zelandia.jpg")"',
             },
             {
-                image: 'image 1',
+                image: 'image 5',
                 title: 'Vietnam',
                 description:'id="carousel-cell5" style="background-image: url("images/vietnam.jpg")"',
             }

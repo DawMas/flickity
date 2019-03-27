@@ -10,7 +10,7 @@ var flkty = new Flickity( elem, {
 (function(){
 var templateItem = document.getElementById('template-product-item').innerHTML;
 
-var results = document.getElementById('main-carousel');
+
 Mustache.parse(templateItem);
 
 var listItems = '';
@@ -20,7 +20,7 @@ for(var i = 0; i < productsData.length; i++){
   listItems += Mustache.render(templateItem, productsData[i]);
 }
 
-
+var results = document.getElementsByClassName('main-carousel');
 results.insertAdjacentHTML('beforeend', listItems);
 
 
