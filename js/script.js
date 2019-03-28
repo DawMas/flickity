@@ -20,8 +20,9 @@ for(var i = 0; i < productsData.length; i++){
   listItems += Mustache.render(templateItem, productsData[i]);
 }
 
+
 var results = document.getElementsByClassName('main-carousel');
-results.insertAdjacentHTML('beforeend', listItems);
+results[0].insertAdjacentHTML('beforeend', listItems);
 
 
 
