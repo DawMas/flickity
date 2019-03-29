@@ -44,4 +44,10 @@
   width: 0;
   background: #555; }
 
+#map {
+  height: 400px;
+  max-width: 1200px;
+  width: auto;
+  background-size: cover; }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,21 +1,35 @@
 
 'use strict';
-(function(){
-var templateItem = document.getElementById('template-product-item').innerHTML;
+(function () {
+  var templateItem = document.getElementById('template-product-item').innerHTML;
 
 
-Mustache.parse(templateItem);
+  Mustache.parse(templateItem);
 
-var listItems = '';
+  var listItems = '';
 
-for(var i = 0; i < productsData.length; i++){
-  console.log(productsData);
-  listItems += Mustache.render(templateItem, productsData[i]);
-}
+  for (var i = 0; i < productsData.length; i++) {
+    console.log(productsData);
+    listItems += Mustache.render(templateItem, productsData[i]);
+  }
 
-var results = document.getElementsByClassName('main-carousel');
-results[0].insertAdjacentHTML('beforeend', listItems);
+  var results = document.getElementsByClassName('main-carousel');
+  results[0].insertAdjacentHTML('beforeend', listItems);
 
+})();
+
+(function () {
+
+  window.initMap = function () {
+    var campnou = productsData[0].cords;
+    var map = new google.maps.Map(document.getElementById('map'), { zoom: 2, center: campnou });
+
+    for (var i=0; i<productsData.length; i++){
+      console.log(productsData);
+      var marker = new google.maps.Marker({position: productsData[i].cords, map: map});
+    }
+   
+  }
 })();
 
 var flkty = new Flickity('.main-carousel', {
