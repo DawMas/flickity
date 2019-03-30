@@ -1,5 +1,11 @@
 
 'use strict';
+
+for (var i=1; i<=5; i++) {
+	setTimeout( function timer(){
+		console.log( i );
+	}, i*1000 );
+}
 (function () {
   var templateItem = document.getElementById('template-product-item').innerHTML;
 
@@ -25,13 +31,14 @@
     var map = new google.maps.Map(document.getElementById('map'), { zoom: 2, center: campnou });
 
     for (var i = 0; i < productsData.length; i++) {
+      (function(){
       console.log(productsData);
       var marker = new google.maps.Marker({ position: productsData[i].cords, map: map });
-      
+      var j=i;
       marker.addListener('click', function() {
-        flkty.selectCell(3);
+        flkty.selectCell(j);
       }) ;
-
+    })();
       };
       console.log(marker);
     
