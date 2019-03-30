@@ -24,11 +24,18 @@
     var campnou = productsData[0].cords;
     var map = new google.maps.Map(document.getElementById('map'), { zoom: 2, center: campnou });
 
-    for (var i=0; i<productsData.length; i++){
+    for (var i = 0; i < productsData.length; i++) {
       console.log(productsData);
-      var marker = new google.maps.Marker({position: productsData[i].cords, map: map});
-    }
-   
+      var marker = new google.maps.Marker({ position: productsData[i].cords, map: map });
+      
+      marker.addListener('click', function() {
+        flkty.selectCell(3);
+      }) ;
+
+      };
+      console.log(marker);
+    
+
   }
 })();
 
