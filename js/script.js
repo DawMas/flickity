@@ -1,11 +1,7 @@
 
 'use strict';
 
-for (var i=1; i<=5; i++) {
-	setTimeout( function timer(){
-		console.log( i );
-	}, i*1000 );
-}
+
 (function () {
   var templateItem = document.getElementById('template-product-item').innerHTML;
 
@@ -27,8 +23,12 @@ for (var i=1; i<=5; i++) {
 (function () {
 
   window.initMap = function () {
-    var campnou = productsData[0].cords;
-    var map = new google.maps.Map(document.getElementById('map'), { zoom: 2, center: campnou });
+
+    var map = new google.maps.Map(document.getElementById('map'), { zoom: 2, center: productsData[0].cords });
+
+    
+    //var campnou = productsData[slide].cords;
+    
 
     for (var i = 0; i < productsData.length; i++) {
       (function(){
@@ -40,7 +40,13 @@ for (var i=1; i<=5; i++) {
       }) ;
     })();
       };
-      console.log(marker);
+
+      flkty.on( 'change', function( index ){
+        var map = new google.maps.Map(document.getElementById('map'), { zoom: 4 , center: productsData[index].cords });
+       
+      } );
+    
+   
     
 
   }
