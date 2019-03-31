@@ -24,31 +24,23 @@
 
   window.initMap = function () {
 
-    var map = new google.maps.Map(document.getElementById('map'), { zoom: 2, center: productsData[0].cords });
-
-    
-    //var campnou = productsData[slide].cords;
-    
+    var map = new google.maps.Map(document.getElementById('map'), { zoom: 1, center: productsData[0].cords });
 
     for (var i = 0; i < productsData.length; i++) {
-      (function(){
-      console.log(productsData);
-      var marker = new google.maps.Marker({ position: productsData[i].cords, map: map });
-      var j=i;
-      marker.addListener('click', function() {
-        flkty.selectCell(j);
-      }) ;
-    })();
-      };
+      (function () {
+        console.log(productsData);
+        var marker = new google.maps.Marker({ position: productsData[i].cords, map: map });
+        var j = i;
+        marker.addListener('click', function () {
+          flkty.selectCell(j);
+        });
+      })();
+    };
 
-      flkty.on( 'change', function( index ){
-        var map = new google.maps.Map(document.getElementById('map'), { zoom: 4 , center: productsData[index].cords });
-       
-      } );
-    
-   
-    
-
+    flkty.on('change', function (index)  {
+      map.panTo(productsData[index].cords);
+      map.setZoom(5)
+    });
   }
 })();
 
